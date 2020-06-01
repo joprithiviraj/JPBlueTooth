@@ -11,10 +11,21 @@ import XCTest
 
 class JPBluetoothTests: XCTestCase {
 
+    var calculationLib: CalculationLib!
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        calculationLib = CalculationLib()
     }
 
+    func testAdd() {
+        XCTAssertEqual(calculationLib.add(a: 1, b: 1), 2)
+    }
+    
+    func testSub() {
+        XCTAssertEqual(calculationLib.sub(a: 2, b: 1), 1)
+    }
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
